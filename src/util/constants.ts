@@ -1,0 +1,2 @@
+export const LANDING_PAGE_PICTURE_URL_1 = 'https://firebasestorage.googleapis.com/v0/b/snaphire-7f27a.firebasestorage.app/o/product-resources%2FlandingPage1.png?alt=media&token=2d93bdc8-c868-4875-b80d-88b384559d26'
+export const LANDING_PAGE_PICTURE_URL_2 = 'https://firebasestorage.googleapis.com/v0/b/snaphire-7f27a.firebasestorage.app/o/product-resources%2FlandingPage2.jpg?alt=media&token=d75b1bf1-7ddc-4f39-a396-110081d9c7bb'

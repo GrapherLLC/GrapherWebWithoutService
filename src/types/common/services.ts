@@ -1,0 +1,1 @@
+export type ServiceType = 'Photography' | 'Videography' | 'Photo Editing' | 'Video Editing';

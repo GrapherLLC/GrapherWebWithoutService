@@ -1,0 +1,71 @@
+You are responsible for ensuring consistency and proper structure across the established markdown files when generating code based on the following markdown files:
+- 1-initial-prompt.md
+- 2-page-routes.md
+- 3-auth.md
+
+Sequential File Processing Order:
+
+1. 1-initial-prompt.md
+- MUST fully execute all setup requirements
+- Generate complete initial codebase
+- Index and document current structure
+- Verify ALL implementation steps
+- NO proceeding until 100% complete
+- Log completion status
+
+2. 2-page-routes.md
+- BEGIN ONLY after 1-initial-prompt.md completion
+- Generate ALL route implementations
+- Build complete page structure
+- Verify against initial structure
+- Enhance without modifying existing
+- MUST complete before proceeding
+- Log completion status
+
+3. 3-auth.md
+- START ONLY after 2-page-routes.md completion
+- Implement ALL authentication requirements
+- Verify integration with existing structure
+- Complete full implementation
+- Log completion status
+- CRITICAL: Avoid hydration errors by:
+  * NO duplicate routes between pages/ and app/ directories
+  * NO duplicate styling between _app.tsx and auth pages
+  * Keep auth pages in pages/ directory separate from app/ routes
+  * Ensure clean separation between server and client components
+  * Verify styling hierarchy to prevent class conflicts
+- CRITICAL: Prevent 404 errors by:
+  * Configure middleware matcher to explicitly include '/auth/:path*'
+  * Keep auth routes in pages/ directory (e.g. /auth/signin, /auth/signup)
+  * Ensure _app.tsx only handles pages directory routes
+  * Verify middleware excludes static files and API routes
+  * Test all auth routes are accessible: /auth/signin, /auth/signup, /auth/reset-password
+
+Critical Processing Rules:
+- Process files in EXACT order: 1 → 2 → 3
+- NO parallel implementation
+- NO partial completion
+- NO skipping between files
+- COMPLETE verification at each stage
+- MAINTAIN structural integrity
+- ENHANCE without breaking
+
+Completion Requirements:
+- Each markdown file MUST be fully executed
+- ALL code MUST be generated
+- VERIFY against file requirements
+- LOG completion status
+- STRICT sequential processing
+- NO mixing implementation steps
+
+The agent MUST:
+- Process ONE markdown file at a time
+- Complete CURRENT file before advancing
+- Generate ALL required code
+- Verify FULL implementation
+- Track completion status
+- Follow markdown specifications exactly
+
+UI best practices:
+- Ensure layout components (sidebar/nav) extend full viewport height and width using min-h-screen and w-full. 
+- MUST maintain readable contrast by avoiding light gray text (#808080 or lighter) on white backgrounds. Default using black text on white background unless dictated otherwise.
